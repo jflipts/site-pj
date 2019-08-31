@@ -47,3 +47,11 @@
     margin-right: 20%;
     margin-bottom: 6rem;
 }
+
+.nav-pills-elegant .nav-item a.active {
+    background-color: #2E2E2E!important;
+}
+
+.nav-pills-elegant .nav-item a {
+    color: #2E2E2E
+}
