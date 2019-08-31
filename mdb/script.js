@@ -30,9 +30,7 @@ function validateForm() {
       $('#formStatus').text(data.message);
       if (data.code) //If mail was sent successfully, reset the form.
       {
-        $('#contact-form').closest('form').find("input[type=text], textarea").val("");
-        $('#contact-form').closest('form').find("input[type=email], textarea").val("");
-        $('#contact-form').closest('form').find("input[type=tel], textarea").val("");
+        $('#contact-form').closest('form').find("input[type=text], input[type=email], input[type=tel], textarea").val("");
         $('#contact-form').closest('form').find(':input').each(function(ix,el)
         {
           el.focus();
