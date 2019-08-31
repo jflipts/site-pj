@@ -55,3 +55,19 @@
 .nav-pills-elegant .nav-item a {
     color: #2E2E2E
 }
+
+.background-CD {
+    /* The image used */
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
+}
