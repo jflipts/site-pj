@@ -39,13 +39,10 @@
           <a class="nav-link" href="#about">About Pieter-Jan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#cd">CD's</a>
+          <a class="nav-link" href="#cd">Released</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#events">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Media</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -62,7 +59,8 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-effect waves-light" href="https://www.linkedin.com/in/pieterjanverhoyen/" target="_blank">
+          <a class="nav-link waves-effect waves-light" href="https://www.linkedin.com/in/pieterjanverhoyen/"
+            target="_blank">
             <i class="fab fa-linkedin"></i>
           </a>
         </li>
@@ -103,7 +101,8 @@
                 </button>
               </li>
               <li class="nav-item">
-                <button type="button" class="btn btn-margin btn-elegant btn-rounded">
+                <button type="button" class="btn btn-margin btn-elegant btn-rounded" data-toggle="modal"
+                  data-target="#ticketForm">
                   Tickets
                   <i class="fas fa-caret-right ml-3"></i>
                 </button>
@@ -214,7 +213,7 @@
 
     <!-- Round image -->
     <div class="text-center">
-      <img src="media/pj.jpg" class="img-fluid rounded-circle" alt="" width="255" height="255">
+      <img src="media/pj3.jpg" class="img-fluid rounded-circle" alt="" width="255" height="255">
     </div>
 
     <!-- Bio -->
@@ -223,14 +222,12 @@
 
 
   <!-- CD -->
-  <div id="cd" class="background-CD">
+  <!-- <div id="cd" class="background-CD"> -->
     <div class="container pt-3">
-      <h3 class="text-center pt-1 pb-1">CD</h3>
+      <h3 class="text-center font-weight-bold pt-1 pb-1">Released</h3>
 
       <!-- Grid row -->
       <div class="card-deck pt-2">
-
-
 
         <!--Card-->
         <div class="card mb-4">
@@ -241,11 +238,10 @@
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
-          <div class="card-body">
-            <!--Name-->
-            <h4 class="font-weight-bold mb-4">Debute-CD Trio Telepatico (2014)</h4>
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-subtitle">Debute-CD Trio Telepatico <small class="text-muted">2014</small></h1>
             <p class="grey-text mt-4">Chamber music for violin, cello and piano</p>
-            <button type="button" class="btn btn-elegant">Buy</button>
+            <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Buy</button>
           </div>
         </div>
         <!--Card-->
@@ -260,11 +256,10 @@
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
-          <div class="card-body">
-            <!--Name-->
-            <h4 class="font-weight-bold mb-4">900 Miles (2017)</h4>
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-subtitle">900 Miles <small class="text-muted">2017</small></h1>
             <p class="grey-text mt-4">Chamber music for flute and piano, with Polish flutist Natalia Jarząbek</p>
-            <button type="button" class="btn btn-elegant">Buy</button>
+            <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Buy</button>
           </div>
         </div>
         <!--Card-->
@@ -278,26 +273,23 @@
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
-          <div class="card-body">
-            <!--Name-->
-            <h4 class="font-weight-bold mb-4">Bericht aan de bevolking (2018)</h4>
-            <p class="grey-text mt-4">Chamber music from the First World War with Trio Telepatico and Kotjesvolk
-            </p>
-            <button type="button" class="btn btn-elegant">Buy</button>
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-subtitle">Bericht aan de bevolking <small class="text-muted">2018</small></h1>
+            <p class="grey-text mt-4">Chamber music from the First World War with Trio Telepatico and Kotjesvolk</p>
+            <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Buy</button>
           </div>
         </div>
         <!--Card-->
 
-
       </div>
       <!-- Grid row -->
     </div>
-  </div>
+  <!-- </div> -->
 
 
   <!-- Events -->
   <div id="events" class="container w-50 p-5">
-    <h3 class="text-center">Events</h3>
+    <h3 class="text-center font-weight-bold pt-1 pb-1">Events</h3>
 
     <ul class="nav nav-pills justify-content-center mb-3 text-center nav-pills-elegant" id="pills-tab" role="tablist">
       <li class="nav-item">
@@ -326,51 +318,27 @@
 
   </div>
 
+
+  <!-- Contact -->
   <div id="contact" class="container">
-      <div class="card mb-4">
-        <div class="card-body contact text-center h-100">
-          <h3 class="my-4 pb-2">Contact Information</h3>
-          <ul class="list-unstyled ml-4">
-            <li>
-              <p><i class="fas fa-map-marker-alt pr-2"></i>Brugge, 8000, Belgium</p>
-            </li>
-            <li>
-              <p><i class="fas fa-phone pr-2"></i>+3299999999</p>
-            </li>
-            <li>
-              <p><i class="fas fa-envelope pr-2"></i>pieterjanverhoyen@test.com</p>
-            </li>
-          </ul>
-        </div>
+    <div class="card mb-4">
+      <div class="card-body contact text-center h-100">
+        <h3 class="my-4 pb-2">Contact Information</h3>
+        <ul class="list-unstyled ml-4">
+          <li>
+            <p><i class="fas fa-map-marker-alt pr-2"></i>Brugge, 8000, Belgium</p>
+          </li>
+          <li>
+            <p><i class="fas fa-phone pr-2"></i>+3299999999</p>
+          </li>
+          <li>
+            <p><i class="fas fa-envelope pr-2"></i>pieterjanverhoyen@test.com</p>
+          </li>
+        </ul>
       </div>
+    </div>
 
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- SCRIPTS -->
@@ -391,7 +359,7 @@
 <footer class="page-footer font-small elegant-color">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
     <a href="https://mdbootstrap.com/education/bootstrap/"> Jeroen Flipts & Elias Coudenys</a>
   </div>
   <!-- Copyright -->
@@ -438,8 +406,10 @@
 
           <div class="md-form">
             <i class="fas fa-pencil prefix grey-text"></i>
-            <textarea type="text" id="formDescription" name="formDescription" class="md-textarea form-control" rows="4" required></textarea>
-            <label data-error="wrong" data-success="right" for="formDescription">Description of your booking request *</label>
+            <textarea type="text" id="formDescription" name="formDescription" class="md-textarea form-control" rows="2"
+              required></textarea>
+            <label data-error="wrong" data-success="right" for="formDescription">Description of your booking request
+              *</label>
           </div>
         </form>
 
@@ -447,10 +417,70 @@
       <div class="modal-footer d-flex justify-content-center">
         <div class="d-flex flex-column">
           <div class="p-2 d-flex justify-content-center">
-              <a class="btn btn-unique" onclick="validateForm()">Send <i class="fas fa-paper-plane-o ml-1"></i></a>
-            </div>
+            <a class="btn btn-unique" onclick="validateForm()">Send <i class="fas fa-paper-plane-o ml-1"></i></a>
+          </div>
           <div class="p-2 d-flex justify-content-center">
-              <div class="status" id="formStatus"></div>
+            <div class="status" id="formStatus"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form Tickets -->
+<div class="modal fade" id="ticketForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Tickets Pieter-Jan</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+
+        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+          <div class="md-form mb-5">
+            <i class="fas fa-user prefix grey-text"></i>
+            <input type="text" id="formName" name="formName" class="form-control validate" required>
+            <label data-error="wrong" data-success="right" for="formName">Your name *</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <i class="fas fa-envelope prefix grey-text"></i>
+            <input type="email" id="formEmail" name="formEmail" class="form-control validate" required>
+            <label data-error="Email adress invalid" data-success="right" for="formEmail">Your email *</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <i class="fas fa-phone prefix grey-text"></i>
+            <input type="tel" id="formPhone" name="formPhone" class="form-control validate" required>
+            <label data-error="wrong" data-success="right" for="formPhone">Telephone number¨*</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <i class="fas fa-users prefix grey-text"></i>
+            <input type="tel" id="formAmount" name="formAmount" class="form-control validate" required>
+            <label data-error="wrong" data-success="right" for="formAmount">Number of tickets¨*</label>
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <textarea type="text" id="formDescription" name="formDescription" class="md-textarea form-control"
+              rows="2"></textarea>
+            <label data-error="wrong" data-success="right" for="formDescription">Note</label>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <div class="d-flex flex-column">
+          <div class="p-2 d-flex justify-content-center">
+            <a class="btn btn-unique" onclick="validateForm()">Send <i class="fas fa-paper-plane-o ml-1"></i></a>
+          </div>
+          <div class="p-2 d-flex justify-content-center">
+            <div class="status" id="formStatus"></div>
           </div>
         </div>
       </div>
