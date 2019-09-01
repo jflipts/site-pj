@@ -56,9 +56,9 @@
     color: #2E2E2E
 }
 
-.background-CD {
+.bg-custom {
     /* The image used */
-    background-image: url("../media/cd_background.jpg");
+    
     /* Full height */
     height: 100%;
     /* Center and scale the image nicely */
@@ -66,6 +66,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: table;
+}
+
+.bg-cd {
+    background-image: url("../media/cd_background.jpg");
+}
+
+.bg-contact {
+    background-image: url("../media/contact_background.jpg");
 }
 
 body, html {
