@@ -85,6 +85,10 @@ body, html {
     height: 100%;
 }
 
+.table-link:link, .table-link:visited {
+    text-decoration: underline;
+}
+
 @media (max-width: 426px) {
 
 
