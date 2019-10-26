@@ -11,6 +11,10 @@
     margin: 10px;
 }
 
+.view-margin {
+    margin-top: 64px;
+}
+
 .hm-gradient {
     background: linear-gradient(40deg, rgba(0, 51, 199, .3), rgba(209, 149, 249, .3));
 }
@@ -79,4 +83,38 @@
 
 body, html {
     height: 100%;
+}
+
+@media (max-width: 426px) {
+
+
+    #heading-intro {
+        font-size: 4rem;
+    }
+
+    .headings-intro {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .btn-intro {
+        margin-left: 0rem !important;
+        margin-right: 0rem !important;
+    }
+}
+
+@media (max-width: 769px) {
+    .headings-intro {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #img-intro {
+        margin: 5%;
+        width: 90%;
+    }
+
+    #about {
+        padding: 5%!important;
+    }
 }
