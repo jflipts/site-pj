@@ -92,20 +92,20 @@
       <div class="col-md-8">
         <div class="d-flex flex-column justify-content-center align-items-center h-100">
           <h1 class="heading display-3 headings-intro" id="heading-intro">Pieter-Jan Verhoyen</h1>
-          <h4 class="subheading font-weight-bold headings-intro">Accompanist and concert pianist with a passion for historically
+          <h4 class="subheading font-weight-bold headings-intro">Accompanist and concert pianist with a passion for
+            historically
             informed performance practice and Flemish repertoire</h4>
           <div class="text-center">
             <ul class="nav my-3">
               <li class="nav-item mx-4 btn-intro">
-                <button type="button" class="btn btn-elegant btn-rounded" data-toggle="modal"
-                  data-target="#bookForm">
+                <button type="button" class="btn btn-elegant btn-rounded" data-toggle="modal" data-target="#bookForm">
                   Book
                   <i class="fas fa-caret-right ml-3"></i>
                 </button>
               </li>
               <li class="nav-item mx-4 btn-intro">
-                <button type="button" class="btn btn-elegant btn-rounded" data-toggle="modal"
-                  data-target="#ticketForm">
+                <button type="button" class="btn btn-elegant btn-rounded"
+                  onClick="document.getElementById('events').scrollIntoView();">
                   Tickets
                   <i class="fas fa-caret-right ml-3"></i>
                 </button>
@@ -116,7 +116,7 @@
       </div>
 
       <div class="col-md-4">
-          <img src="media/pj4.jpg" class="img-fluid" id="img-intro" alt="Pieter-Jan intro" width="100%">
+        <img src="media/pj4.jpg" class="img-fluid" id="img-intro" alt="Pieter-Jan intro" width="100%">
       </div>
 
     </div>
@@ -224,7 +224,7 @@
   <div id="cd" class="container-fluid bg-custom bg-cd">
     <div class="container pt-3">
       <h3 class="text-center font-weight-bold pt-1 pb-1 text-light">Releases</h3>
-  
+
       <!-- Grid row -->
       <div class="row">
         <div class="col-12 col-md-4 d-flex align-items-stretch">
@@ -246,7 +246,7 @@
           </div>
           <!--Card-->
         </div>
-  
+
         <div class="col-12 col-md-4 d-flex align-items-stretch">
           <!--Card-->
           <div class="card mb-4 d-flex align-items-stretch">
@@ -266,7 +266,7 @@
           </div>
           <!--Card-->
         </div>
-  
+
         <div class="col-12 col-md-4 d-flex align-items-stretch">
           <!--Card-->
           <div class="card mb-4 ">
@@ -293,13 +293,13 @@
 
 
   <!-- Events -->
-  <div id="events" class="container w-50 p-5">
-    <h3 class="text-center font-weight-bold pt-1 pb-1">Events</h3>
+  <div id="events" class="container my-3">
+    <h3 class="text-center font-weight-bold my-2">Events</h3>
 
     <ul class="nav nav-pills justify-content-center mb-3 text-center nav-pills-elegant" id="pills-tab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="upcoming-tab" data-toggle="pill" href="#upcoming" role="tab"
-          aria-controls="upcoming" aria-selected="true">upcoming</a>
+          aria-controls="upcoming" aria-selected="true">Upcoming</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-center" id="passed-tab" data-toggle="pill" href="#passed" role="tab"
@@ -307,35 +307,73 @@
       </li>
     </ul>
 
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="upcoming" role="tabpanel" aria-labelledby="upcoming-tab">
-        <div class="row">
-          <div class="col-sm">
-            Saturday 16/10, 20u
-          </div>
-          <div class="col-xl">
-            Castle concert: Pieter-Jan Verhoyen & Jeroen De Beer
-            <span class="text-muted">Kasteel Leyselebeke, Sint-Michiels </span>
-          </div>
-          <div class="col-sm">
-            Tickets: info@arcobaleno.be
-          </div>
-        </div>
-
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"></li>
-        </ul>
+    <!-- Upcoming -->
+    <div class="tab-content">
+      <div class="tab-pane fade show active table-responsive" id="upcoming" role="tabpanel"
+        aria-labelledby="upcoming-tab">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Concert</th>
+              <th scope="col">Location</th>
+              <th scope="col">Tickets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Friday 29/11/2019, 20h</th>
+              <td>Anima Eterna: Russische triptiek</td>
+              <td>Concertgebouw Brugge</td>
+              <td><a href="http://www.concertgebouw.be/">www.concertgebouw.be</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday 12/01/2020, 11h</th>
+              <td>Young Masters: Pieter-Jan Verhoyen & Océane Knop</td>
+              <td>De Bijloke Ghent</td>
+              <td><a href="http://www.bijloke.be/">www.bijloke.be</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday 08/03/2020, 11h</th>
+              <td>Ryelandt Festival: Klanken uit het fin-de-siècle Brugge</td>
+              <td>Sint-Lodewijkscollege Brugge</td>
+              <td><a href="http://www.conservatorium-brugge.be/">www.conservatorium-brugge.be</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday 29/03/2020, 15h</th>
+              <td>Ryelandt Festival: De Gezelleliederen van Joseph Ryelandt</td>
+              <td>Ryelandtzaal Brugge</td>
+              <td><a href="http://www.conservatorium-brugge.be/">www.conservatorium-brugge.be</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="tab-pane fade" id="passed" role="tabpanel" aria-labelledby="passed-tab">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"></li>
-        </ul>
+
+      <!-- Passed -->
+      <div class="tab-pane fade table-responsive" id="passed" role="tabpanel" aria-labelledby="passed-tab">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Concert</th>
+              <th scope="col">Location</th>
+              <th scope="col">Tickets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Saturday 16/10/2019, 20h</th>
+              <td>Castle concert: Pieter-Jan Verhoyen & Jeroen De Beer</td>
+              <td>Kasteel Leyselebeke, Sint-Michiels</td>
+              <td>info@arcobaleno.be</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
-
   </div>
+  <!-- Events -->
 
 
   <!-- Contact -->
@@ -379,7 +417,7 @@
 <footer class="page-footer font-small elegant-color">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+  <div class="footer-copyright text-center py-3 px-3">© 2019 Copyright:
     <a href="https://mdbootstrap.com/education/bootstrap/"> Jeroen Flipts & Elias Coudenys</a>
   </div>
   <!-- Copyright -->
