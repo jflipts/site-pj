@@ -31,7 +31,7 @@ if ($message === ''){
 $subject = "Booking Request $name, $organisation";
 
 $content="From: $name \n Email: $email \n Phone: $phone \n Organisation: $organisation \n Message: $message";
-$recipient = "elias.coudenys@gmail.com";
+$recipient = "obc.artistsmanagement@gmail.com";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $content, $mailheader) or die("Error!");
 print json_encode(array('message' => 'Email successfully sent!', 'code' => 1));
