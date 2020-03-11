@@ -65,10 +65,7 @@
 }
 
 .bg-custom {
-    /* The image used */
-    
-    /* Full height */
-    height: 100%;
+    width: 100%;
     /* Center and scale the image nicely */
     background-attachment: fixed;
     background-position: center;
@@ -125,4 +122,14 @@ body, html {
     #about {
         padding: 5%!important;
     }
+}
+
+.img-squarify{
+    position:relative;
+    overflow:hidden;
+    padding-bottom:100%;
+    background-color: lightgray;
+}
+.img-squarify img{
+    position:absolute;
 }
