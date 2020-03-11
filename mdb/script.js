@@ -1,3 +1,8 @@
+// Collapse the hamburger menu on mobile on click
+$('.navbar-nav>li>a').on('click', function(){
+  $('.navbar-collapse').collapse('hide');
+});
+
 // Function that collapses the button of the bio
 function collapseJS() {
     var x = document.getElementById("collapseTopButton");
