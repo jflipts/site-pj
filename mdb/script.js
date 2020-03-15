@@ -51,3 +51,43 @@ function validateForm() {
     }
   });
 }
+
+function validateBuyForm() {
+  document.getElementById('formStatus').innerHTML = "Sending...";
+
+  var cdData = [];
+  $.each($("input[name='cd']:checked"), function () {
+    cdData.push($(this).val());
+  });
+
+  formData = {
+    'formCD': cdData.join(", "),
+    'formName': $('input[name=formName]').val(),
+    'formEmail': $('input[name=formEmail]').val(),
+    'formPhone': $('input[name=formPhone]').val(),
+    'formDescription': $('textarea[name=formDescription]').val()
+  };
+
+
+  $.ajax({
+    url: "mail-buy.php",
+    type: "POST",
+    data: formData,
+    success: function (data, textStatus, jqXHR) {
+      $('#formStatus').text(data.message);
+      if (data.code) //If mail was sent successfully, reset the form.
+      {
+        $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+        $('#contact-form').closest('form').find("input[type=email], textarea").val("");
+        $('#contact-form').closest('form').find("input[type=tel], textarea").val("");
+        $('#contact-form').closest('form').find(':input').each(function (ix, el) {
+          el.focus();
+        });
+        document.activeElement.blur();
+      }
+    },
+    error: function (errorThrown, textStatus, jqXHR) {
+      $('#formStatus').text(errorThrown);
+    }
+  });
+}

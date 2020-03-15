@@ -225,7 +225,7 @@
 
 
   <!-- CD -->
-  <div id="cd" class="container-fluid bg-custom bg-cd  p-4">
+  <div id="cd" class="container-fluid bg-custom bg-cd p-4">
     <div class="container">
       <h3 class="text-center font-weight-bold m-0 pb-4 text-light">Releases</h3>
 
@@ -245,7 +245,7 @@
               <h4 class="card-title">Trio Telepatico</h4>
               <h5 class="card-subtitle mb-2 text-muted">2014</h5>
               <p class="grey-text mt-4">Chamber music for violin, cello and piano</p>
-              <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Buy</button>
+              <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant" data-toggle="modal" data-target="#buyForm">Order</button>
             </div>
           </div>
           <!--Card-->
@@ -265,7 +265,7 @@
               <h4 class="card-title">900 Miles</h4>
               <h5 class="card-subtitle mb-2 text-muted">2017</h5>
               <p class="grey-text mt-4">Chamber music for flute and piano, with Polish flutist Natalia Jarząbek</p>
-              <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Buy</button>
+              <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Order</button>
             </div>
           </div>
           <!--Card-->
@@ -285,7 +285,7 @@
               <h4 class="card-title">Bericht aan de bevolking</h4>
               <h5 class="card-subtitle mb-2 text-muted">2018</h5>
               <p class="grey-text mt-4">Chamber music from the First World War with Trio Telepatico and Kotjesvolk</p>
-              <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Buy</button>
+              <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Order</button>
             </div>
           </div>
           <!--Card-->
@@ -305,7 +305,7 @@
               <h4 class="card-title">Joseph Ryelandt</h4>
               <h5 class="card-subtitle mb-2 text-muted">2020</h5>
               <p class="grey-text mt-4">Romantic chamber music in fin-de-siècle Bruges with Terra Nova Collective</p>
-              <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Buy</button>
+              <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-elegant">Order</button>
             </div>
           </div>
           <!--Card-->
@@ -517,7 +517,79 @@
       <div class="modal-footer d-flex justify-content-center">
         <div class="d-flex flex-column">
           <div class="p-2 d-flex justify-content-center">
-            <a class="btn btn-unique" onclick="validateForm()">Send <i class="fas fa-paper-plane-o ml-1"></i></a>
+            <a class="btn btn-elegant btn-rounded" onclick="validateForm()">Send <i class="fas fa-paper-plane-o ml-1"></i></a>
+          </div>
+          <div class="p-2 d-flex justify-content-center">
+            <div class="status" id="formStatus"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form Buy -->
+<div class="modal fade" id="buyForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Order CD</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <form id="contact-form" name="contact-form" action="mail-buy.php" method="POST">
+          <div class="md-form mb-5 mx-3"> 
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="check_cd1" value="cd_trio_telepatico" name="cd">
+              <label class="custom-control-label" for="check_cd1">Trio Telepatico</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="check_cd2" value="cd_900_miles" name="cd">
+              <label class="custom-control-label" for="check_cd2">900 Miles</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="check_cd3" value="cd_bericht_aan_de_bevolking" name="cd">
+              <label class="custom-control-label" for="check_cd3">Bericht aan de bevolking</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="check_cd4" value="cd_joseph_ryelandt" name="cd">
+              <label class="custom-control-label" for="check_cd4">Joseph Ryelandt</label>
+            </div>
+          </div>
+
+
+          <div class="md-form mb-5">
+            <i class="fas fa-user prefix grey-text"></i>
+            <input type="text" id="formName" name="formName" class="form-control validate" required>
+            <label data-error="wrong" data-success="right" for="formName">Your name *</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <i class="fas fa-envelope prefix grey-text"></i>
+            <input type="email" id="formEmail" name="formEmail" class="form-control validate" required>
+            <label data-error="Email adress invalid" data-success="right" for="formEmail">Your email *</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <i class="fas fa-phone prefix grey-text"></i>
+            <input type="tel" id="formPhone" name="formPhone" class="form-control validate" required>
+            <label data-error="wrong" data-success="right" for="formPhone">Telephone number¨*</label>
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil prefix grey-text"></i>
+            <textarea type="text" id="formDescription" name="formDescription" class="md-textarea form-control" rows="2"></textarea>
+            <label data-error="wrong" data-success="right" for="formDescription">Comments</label>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <div class="d-flex flex-column">
+          <div class="p-2 d-flex justify-content-center">
+            <a class="btn btn-elegant btn-rounded" onclick="validateBuyForm()">Send <i class="fas fa-paper-plane-o ml-1"></i></a>
           </div>
           <div class="p-2 d-flex justify-content-center">
             <div class="status" id="formStatus"></div>
