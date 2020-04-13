@@ -13,45 +13,49 @@ function collapseJS() {
   }
 }
 
-// Function to validate the booking form
-function validateForm() {
-  document.getElementById('formStatus').innerHTML = "Sending...";
-
-  formData = {
-    'formName': $('input[name=formName]').val(),
-    'formEmail': $('input[name=formEmail]').val(),
-    'formOrg': $('input[name=formOrg]').val(),
-    'formPhone': $('input[name=formPhone]').val(),
-    'formDescription': $('textarea[name=formDescription]').val()
-  };
-
-
-  $.ajax({
-    url: "mail.php",
-    type: "POST",
-    data: formData,
-    success: function (data, textStatus, jqXHR) {
-      $('#formStatus').text(data.message);
-      if (data.code) //If mail was sent successfully, reset the form.
-      {
-        $('#contact-form').closest('form').find("input[type=text], textarea").val("");
-        $('#contact-form').closest('form').find("input[type=email], textarea").val("");
-        $('#contact-form').closest('form').find("input[type=tel], textarea").val("");
-        $('#contact-form').closest('form').find(':input').each(function (ix, el) {
-          el.focus();
-        });
-        document.activeElement.blur();
-      }
-    },
-    error: function (errorThrown, textStatus, jqXHR) {
-      $('#formStatus').text(errorThrown);
-    }
-  });
-}
-
+// JQUERY Functions
 $(document).ready(function () {
+  // Book form open
+  $("#book-form-btn").on('click', function (event) {
+    //event.stopPropagation();
+    //event.stopImmediatePropagation();
+    $('#book-form-body').show();
+    $('#book-form-btn-submit').show();
+    $('#bookFormStatus').text("");
+  });
 
-  // Modal could have been hidden
+  // Book form submit
+  $("#book-form-btn-submit").on('click', function (event) {
+    if ($('#book-form')[0].checkValidity() === false) {
+      return true;
+    }
+    event.preventDefault();
+    $('#bookFormStatus').text("Sending...")
+
+    var formData = {
+      'formName': $('input[name=formName]').val(),
+      'formEmail': $('input[name=formEmail]').val(),
+      'formOrg': $('input[name=formOrg]').val(),
+      'formPhone': $('input[name=formPhone]').val(),
+      'formDescription': $('textarea[name=formDescription]').val(),
+    };
+
+    $.ajax({
+      url: "mail-book.php",
+      type: "POST",
+      data: formData,
+    }).done(function (response, textStatus, jqXHR) {
+      if (response.code) {
+        $('#book-form-body').hide();
+        $('#book-form-btn-submit').hide();
+      }
+      $('#bookFormStatus').text(response.message);
+    }).fail(function (jqXHR, textStatus, errorThrown) {
+      $('#bookFormStatus').text(textStatus);
+    });
+  });
+
+  // Buy form open: Modal could have been hidden
   $(".buy-form-btn-open").on('click', function (event) {
     //event.stopPropagation();
     //event.stopImmediatePropagation();
@@ -60,13 +64,13 @@ $(document).ready(function () {
     $('#buyFormStatus').text("");
   });
 
+  // Buy form submit
   $("#buy-form-btn-submit").on('click', function (event) {
-    var form = $('#buy-form') 
-    if($('#buy-form')[0].checkValidity() === false) {
+    if ($('#buy-form')[0].checkValidity() === false) {
       return true;
     }
     event.preventDefault();
-    document.getElementById('buyFormStatus').innerHTML = "Sending...";
+    $('#buyFormStatus').text("Sending...")
 
     var cdData = [];
     $.each($("input[name='buy_cd']"), function () {
@@ -105,7 +109,6 @@ $(document).ready(function () {
       }
       $('#buyFormStatus').text(response.message);
     }).fail(function (jqXHR, textStatus, errorThrown) {
-      var errr = errorThrown
       $('#buyFormStatus').text(textStatus);
     });
   });

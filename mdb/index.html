@@ -102,7 +102,7 @@
           <div class="text-center">
             <ul class="nav my-3">
               <li class="nav-item mx-4 btn-intro">
-                <button type="button" class="btn btn-elegant btn-rounded" data-toggle="modal" data-target="#bookForm">
+                <button type="button" id="book-form-btn" class="btn btn-elegant btn-rounded" data-toggle="modal" data-target="#bookForm">
                   Book
                   <i class="fas fa-caret-right ml-3"></i>
                 </button>
@@ -499,55 +499,52 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body mx-3">
-
-        <form id="contact-form" name="contact-form" onsubmit="validatedForm()">
-          <div class="md-form mb-5">
+      <form id="book-form" name="book-form">
+        <div id="book-form-body" class="modal-body mx-3">
+          <div class="md-form">
             <i class="fas fa-user prefix grey-text"></i>
-            <input type="text" id="formName" name="formName" class="form-control validate" required>
-            <label data-error="wrong" data-success="right" for="formName">Your name *</label>
+            <input type="text" id="formBookName" name="formName" class="form-control validate" required>
+            <label data-error="wrong" data-success="right" for="formBookName">Your name *</label>
           </div>
 
-          <div class="md-form mb-5">
+          <div class="md-form">
             <i class="fas fa-envelope prefix grey-text"></i>
-            <input type="email" id="formEmail" name="formEmail" class="form-control validate" required>
-            <label data-error="Email adress invalid" data-success="right" for="formEmail">Your email *</label>
+            <input type="email" id="formBookEmail" name="formEmail" class="form-control validate" required>
+            <label data-error="Email adress invalid" data-success="right" for="formBookEmail">Your email *</label>
           </div>
 
-          <div class="md-form mb-5">
+          <div class="md-form">
             <i class="fas fa-phone prefix grey-text"></i>
-            <input type="tel" id="formPhone" name="formPhone" class="form-control validate" required>
-            <label data-error="wrong" data-success="right" for="formPhone">Telephone number¨*</label>
+            <input type="tel" id="formBookPhone" name="formPhone" class="form-control validate" required>
+            <label data-error="wrong" data-success="right" for="formBookPhone">Telephone number¨*</label>
           </div>
 
-          <div class="md-form mb-5">
+          <div class="md-form">
             <i class="fas fa-users prefix grey-text"></i>
-            <input type="text" id="formOrg" name="formOrg" class="form-control validate">
-            <label data-error="wrong" data-success="right" for="formOrg">Organisation</label>
+            <input type="text" id="formBookOrg" name="formOrg" class="form-control validate">
+            <label data-error="wrong" data-success="right" for="formBookOrg">Organisation</label>
           </div>
 
           <div class="md-form">
             <i class="fas fa-pencil prefix grey-text"></i>
-            <textarea type="text" id="formDescription" name="formDescription" class="md-textarea form-control" rows="2"
-              required></textarea>
-            <label data-error="wrong" data-success="right" for="formDescription">Description of your booking request
+            <textarea type="text" id="formBookDescription" name="formDescription" class="md-textarea form-control"
+              rows="4" required></textarea>
+            <label data-error="wrong" data-success="right" for="formBookDescription">Description of your booking request
               *</label>
           </div>
-          <!-- <button class="btn btn-elegant btn-rounded" type="submit">Order</button> -->
-        </form>
-
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <div class="d-flex flex-column">
-          <div class="p-2 d-flex justify-content-center">
-            <a class="btn btn-elegant btn-rounded" onclick="validateForm()">Send <i
-                class="fas fa-paper-plane-o ml-1"></i></a>
-          </div>
-          <div class="p-2 d-flex justify-content-center">
-            <div class="status" id="formStatus"></div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <div class="d-flex flex-column">
+            <div class="p-2 d-flex justify-content-center">
+              <button id="book-form-btn-submit" class="btn btn-elegant btn-rounded" type="submit">Book</button>
+            </div>
+            <!-- Form status -->
+            <div class="p-2 d-flex justify-content-center">
+              <div class="status" id="bookFormStatus"></div>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
