@@ -23,3 +23,4 @@ This will output every mail as a .txt file in the _/xampp/mailoutput/_ folder. I
 * Popup modal for promotional purposes of events and new releases.
 * Remove all javascript from the html
 * Change to scss
+* CICD
