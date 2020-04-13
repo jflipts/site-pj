@@ -138,3 +138,28 @@ body, html {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
+
+/* FORMS */
+.form-group {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin: 0;
+}
+
+.form-group .col-form-label, .form-group .md-form, .form-group .md-form .form-control {
+    margin: 0;
+    padding: 0;
+}
+
+.form-group .col-form-label {
+    color: #757575;
+}
+
+.md-form .validate {
+    margin-bottom: 0;
+}
+
+.form-details {
+    padding-top: 1rem;
+    color: #757575;
+}
